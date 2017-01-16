@@ -1,6 +1,6 @@
 # Fizz Buzz 
 
-Simple test-driven implementation of the (FizzBuzz game)[https://en.wikipedia.org/wiki/Fizz_buzz]. 
+Simple test-driven implementation of the [FizzBuzz game](https://en.wikipedia.org/wiki/Fizz_buzz). 
 
 FizzBuzz can be played with as many people as you like. 
 The game starts with the initial count being 1.
