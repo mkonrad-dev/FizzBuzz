@@ -4,6 +4,9 @@ import java.io.PrintStream;
 import java.util.stream.IntStream;
 
 /**
+ * Simple implementation of the Fizz Buzz game. See the README.md or the
+ * <a href="https://en.wikipedia.org/wiki/Fizz_buzz">Wikipedia page</a> on Fizz Buzz for more details.
+ *
  * @author Markus Konrad
  */
 public final class FizzBuzz {
@@ -14,7 +17,12 @@ public final class FizzBuzz {
 		this.printStream = printStream;
 	}
 
-	public final void run(int numberOfRounds){
+  /**
+   * Start a new game with the given maximum number of rounds.
+   *
+   * @param numberOfRounds the number of rounds the game lasts
+   */
+	public final void run(int numberOfRounds) {
 		if (numberOfRounds < 1) {
 			printStream.println("Please specify a positive value for the parameter \"numberOfRounds\"");
 			return;
