@@ -59,54 +59,6 @@ public class FizzBuzzTest {
 	}
 
 	@Test
-	public void run_oneRound() throws Exception {
-		// given
-		int numberOfRounds = 1;
-		// when
-		fizzBuzz.run(numberOfRounds);
-		// then
-    InOrder inOrder = inOrder(printStream);
-    Stream.of(EXPECTED_OUTPUT).limit(numberOfRounds).forEach(x -> inOrder.verify(printStream).println(x));
-    verifyNoMoreInteractions(printStream);
-	}
-
-	@Test
-	public void run_threeRounds() throws Exception {
-		// given
-		int numberOfRounds = 3;
-		// when
-		fizzBuzz.run(numberOfRounds);
-		// then
-		InOrder inOrder = inOrder(printStream);
-    Stream.of(EXPECTED_OUTPUT).limit(numberOfRounds).forEach(x -> inOrder.verify(printStream).println(x));
-    verify(printStream, times(numberOfRounds)).println(anyString());
-	}
-
-	@Test
-	public void run_fiveRounds() throws Exception {
-		// given
-		int numberOfRounds = 5;
-		// when
-		fizzBuzz.run(numberOfRounds);
-		// then
-		InOrder inOrder = inOrder(printStream);
-    Stream.of(EXPECTED_OUTPUT).limit(numberOfRounds).forEach(x -> inOrder.verify(printStream).println(x));
-    verify(printStream, times(numberOfRounds)).println(anyString());
-	}
-
-	@Test
-	public void run_fifteenRounds() throws Exception {
-		// given
-		int numberOfRounds = 15;
-		// when
-		fizzBuzz.run(numberOfRounds);
-		// then
-		InOrder inOrder = inOrder(printStream);
-    Stream.of(EXPECTED_OUTPUT).limit(numberOfRounds).forEach(x -> inOrder.verify(printStream).println(x));
-    verify(printStream, times(numberOfRounds)).println(anyString());
-	}
-
-	@Test
 	public void run_oneHundredRounds() throws Exception {
 		// given
 		int numberOfRounds = 100;
