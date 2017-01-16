@@ -1,5 +1,7 @@
 # Fizz Buzz 
 
+[![Build Status](https://travis-ci.org/mkonrad-dev/FizzBuzz.svg?branch=master)](https://travis-ci.org/mkonrad-dev/FizzBuzz)
+
 Simple test-driven implementation of the [FizzBuzz game](https://en.wikipedia.org/wiki/Fizz_buzz). 
 
 FizzBuzz can be played with as many people as you like. 
