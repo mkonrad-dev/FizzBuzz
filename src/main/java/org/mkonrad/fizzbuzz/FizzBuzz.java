@@ -1,6 +1,7 @@
 package org.mkonrad.fizzbuzz;
 
 import java.io.PrintStream;
+import java.util.stream.IntStream;
 
 /**
  * @author Markus Konrad
@@ -18,19 +19,18 @@ public final class FizzBuzz {
 			printStream.println("Please specify a positive value for the parameter \"numberOfRounds\"");
 			return;
 		}
-		for (int i = 1; i <= numberOfRounds; i++) {
-			if (i % 3 == 0) {
-				if (i % 5 == 0) {
-					printStream.println("FizzBuzz");
-				} else {
-					printStream.println("Fizz");
-				}
-			} else if (i % 5 == 0) {
-        printStream.println("Buzz");
-			} else {
-				printStream.println(String.valueOf(i));
-			}
-		}
+    IntStream.range(1, numberOfRounds + 1).mapToObj(i ->	{
+      if (i % 3 == 0) {
+        if (i % 5 == 0) {
+          return "FizzBuzz";
+        }
+        return "Fizz";
+      }
+      if (i % 5 == 0) {
+        return "Buzz";
+      }
+      return String.valueOf(i);
+    }).forEach(printStream::println);
 	}
 
 	public static void main(String[] args) {
