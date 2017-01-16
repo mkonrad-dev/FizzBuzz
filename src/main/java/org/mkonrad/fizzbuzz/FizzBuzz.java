@@ -19,18 +19,20 @@ public final class FizzBuzz {
 			printStream.println("Please specify a positive value for the parameter \"numberOfRounds\"");
 			return;
 		}
-    IntStream.range(1, numberOfRounds + 1).mapToObj(i ->	{
-      if (i % 3 == 0) {
-        if (i % 5 == 0) {
-          return "FizzBuzz";
+    IntStream.range(1, numberOfRounds + 1)
+      .mapToObj(i ->	{
+        if (i % 3 == 0) {
+          if (i % 5 == 0) {
+            return "FizzBuzz";
+          }
+          return "Fizz";
         }
-        return "Fizz";
-      }
-      if (i % 5 == 0) {
-        return "Buzz";
-      }
-      return String.valueOf(i);
-    }).forEach(printStream::println);
+        if (i % 5 == 0) {
+          return "Buzz";
+        }
+        return String.valueOf(i);
+      })
+      .forEach(printStream::println);
 	}
 
 	public static void main(String[] args) {
