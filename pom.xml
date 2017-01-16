@@ -27,8 +27,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <finalName>${artifactId}</finalName>
-    </build>
 </project>
