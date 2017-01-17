@@ -1,4 +1,5 @@
 apply plugin: 'application'
+apply plugin: 'findbugs'
 
 group = 'org.mkonrad.fizzbuzz'
 version = '1.0.0-SNAPSHOT'
@@ -16,4 +17,11 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version:'4.12'
     testCompile group: 'org.mockito', name: 'mockito-core', version:'1.10.19'
     testCompile group: 'org.assertj', name: 'assertj-core', version:'3.2.0'
+}
+
+tasks.withType(FindBugs) {
+  reports {
+    xml.enabled false
+    html.enabled true
+  }
 }
